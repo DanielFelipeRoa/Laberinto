@@ -22,7 +22,7 @@ class Ventana():
         self.canvas.pack()
 
         self.pencil = RawTurtle(self.fondo_ventana)
-        self.pencil.pencolor("white")
+        self.pencil.pencolor("pink")
 
 class Laberinto():
 
@@ -53,18 +53,18 @@ class Laberinto():
     def dibuja_laberinto(self):
 
         self.lienzo.fondo_ventana.tracer(False)
-        self.lienzo.pencil.pencolor("white")
+        self.lienzo.pencil.pencolor("pink")
 
         for i in range(len(self.laberinto)):
 
             for j in range(len(self.laberinto[i])):
 
                 if self.laberinto[i][j] == 1:
-                    self.casilla("black", i, j)
+                    self.casilla("blue", i, j)
                 elif self.laberinto[i][j] == 3:
-                    self.casilla("red", i, j)
+                    self.casilla("yellow", i, j)
                 elif self.laberinto[i][j] == 0:
-                    self.casilla("white", i, j)
+                    self.casilla("pink", i, j)
 
         self.lienzo.fondo_ventana.tracer(True)
 
@@ -96,7 +96,7 @@ class Laberinto():
             x = int(sol[i][0])
             y = int(sol[i][1])
             sleep(0.05)
-            self.casilla("darkgreen", x,y)
+            self.casilla("purple", x,y)
             self.lienzo.fondo_ventana.tracer(True)
         sleep(3)
 
